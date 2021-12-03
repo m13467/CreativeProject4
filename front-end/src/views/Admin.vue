@@ -65,21 +65,21 @@ created() {
 },
 methods: {
   selectItem(item) {
-    console.log(item);
+    //console.log(item);
     this.findItem = item;
   },
   async deleteItem(item){
-    console.log("Ooo");
+    //console.log("Ooo");
     try {
     let r2 = await axios.delete('/api/items/' + item._id);
-    console.log(r2);
+    //console.log(r2);
     this.getItems();
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   },
   async editItem(item){
-    console.log(item.date);
+    //console.log(item.date);
     try {
     let r2 = await axios.put('/api/items/' + item._id, {
       date: item.date,
@@ -91,9 +91,9 @@ methods: {
     });
     this.findItem = null;
     this.getItems();
-    console.log(r2);
+    //console.log(r2);
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   },
   async getItems() {
@@ -102,7 +102,7 @@ methods: {
       this.items = response.data;
       return true;
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   }
 }

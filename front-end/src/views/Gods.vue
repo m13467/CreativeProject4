@@ -37,11 +37,11 @@ model: {
 },
 methods: {
   async submit(){
-    console.log("Wow");
+    //console.log("Wow");
     try {
-    console.log(this.sign);
+    //console.log(this.sign);
     if (typeof this.sign === 'undefined' || this.sign == ""){
-      console.log("No way");
+      //console.log("No way");
       return;
     }
     let r2 = await axios.post('/api/items', {
@@ -52,9 +52,9 @@ methods: {
       lucky_time: this.time,
       description: this.description,
     });
-    console.log(r2);
+    //console.log(r2);
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   },
   delay() {

@@ -87,11 +87,11 @@ export default {
         var sign1 = this.$root.$data.sign
         this.$root.$data.current = this.$root.$data.api.filter(function(val) {
             if (val.day.toLowerCase() == day1.toLowerCase() && val.sign.toLowerCase() == sign1.toLowerCase()){
-              console.log("Made it here")
+              //console.log("Made it here")
               return val
             }
         })
-        console.log(this.$root.$data.current)
+        //console.log(this.$root.$data.current)
       },
     },
   }
