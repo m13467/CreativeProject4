@@ -128,6 +128,7 @@ methods: {
 }
 button {
   color: black;
+  padding: 10px;
 }
 .acceptButton:hover {
   background-color: #a4ffad;
