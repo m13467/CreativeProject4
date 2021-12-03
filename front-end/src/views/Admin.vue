@@ -71,7 +71,7 @@ methods: {
   async deleteItem(item){
     //console.log("Ooo");
     try {
-    let r2 = await axios.delete('/api/items/' + item._id);
+    await axios.delete('/api/items/' + item._id);
     //console.log(r2);
     this.getItems();
     } catch (error) {
@@ -81,7 +81,7 @@ methods: {
   async editItem(item){
     //console.log(item.date);
     try {
-    let r2 = await axios.put('/api/items/' + item._id, {
+    await axios.put('/api/items/' + item._id, {
       date: item.date,
       sign: item.sign,
       color: item.color,
