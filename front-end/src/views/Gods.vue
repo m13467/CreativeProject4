@@ -44,7 +44,7 @@ methods: {
       //console.log("No way");
       return;
     }
-    let r2 = await axios.post('/api/items', {
+    await axios.post('/api/items', {
       date: this.date,
       sign: this.sign,
       color: this.color,
