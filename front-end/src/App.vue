@@ -7,7 +7,7 @@
     </div>
     <router-view/>
     <footer>
-      <a href='https://github.com/m13467/CreativeProject3.git'>
+      <a href='https://github.com/m13467/CreativeProject4.git'>
         <img id='fimage' src='/images/git.png' alt='github' />
         <p>MacKenzie Fisher, Nate McMurray</p>
       </a>

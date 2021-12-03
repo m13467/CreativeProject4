@@ -26,7 +26,6 @@ const Horoscope = mongoose.model('Horoscope', horoscopeSchema);
 
 // Create a new item in the museum: takes a title and a path to an image.
 app.post('/api/items', async (req, res) => {
-  console.log(req);
   const item = new Horoscope({
     date: req.body.date,
     color: req.body.color,
@@ -69,9 +68,10 @@ app.delete('/api/items/:id', async (req, res) => {
 
 app.put('/api/items/:id', async (req, res) => {
   try {
-    let item = await Item.findOne({
+    let item = await Horoscope.findOne({
       _id: req.params.id
     });
+    console.log(req);
     item.date = req.body.date;
     item.sign = req.body.sign;
     item.color = req.body.color;
@@ -86,4 +86,4 @@ app.put('/api/items/:id', async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log('Server listening on port 3000!'));
+app.listen(3001, () => console.log('Server listening on port 3001!'));
